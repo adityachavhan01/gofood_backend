@@ -17,7 +17,6 @@ const connectToMongo = async () => {
         
         const foodCategoryCollection = mongoose.connection.db.collection("foodcategories");
         const catData = await foodCategoryCollection.find({}).toArray();
-        
         global.food_items = data;
         global.food_category = catData;
     
